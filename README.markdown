@@ -5,9 +5,6 @@ AJAX Web sites have sometimes taken up the "endless page"
 model, where scrolling automatically loads in new content,
 so you never have to click a "Next" link or anything like that.
 
-Wouldn't it be cool to have that in an Android application?
-Kinda like how the Android Market does it?
-
 `EndlessAdapter` is one approach to solving this problem.
 
 It is designed to wrap around another adapter, where you have
@@ -35,9 +32,40 @@ but may not work with other adapter types, particularly
 `SimpleAdapter`. It also will only work with a `ListView` or
 possibly other one-`View`-at-a-time `AdapterView` implementations.
 
-This is [available as a JAR file](https://github.com/commonsguy/downloads).
-The project itself is set up as an Android library project,
-in case you wish to use the source code in that fashion.
+Installation
+------------
+This Android library project is 
+[available as a JAR](https://gihub.com/commonsguy/cwac-endless/releases).
+If you wish to use the JAR, you will need to also add the JAR from
+[the CWAC-Adapter project](http://github.com/commonsguy/cwac-adapter) to your
+project
+
+If you plan to use this as an Android library project
+in source form, you
+will also need to download [the CWAC-Adapter project](http://github.com/commonsguy/cwac-adapter)
+(and, if needed, modify this project's configuration to point to your copy of
+CWAC-Adapter library project). Alternatively, download the CWAC-Adapter JAR into
+the `libs/` directory of your clone of this project and remove the dependency on
+the CWAC-Adapter library project.
+
+This project is also available as
+an artifact for use with Gradle. To use that, add the following
+blocks to your `build.gradle` file:
+
+```groovy
+repositories {
+    maven {
+        url "https://repo.commonsware.com.s3.amazonaws.com"
+    }
+}
+
+dependencies {
+    compile 'com.commonsware.cwac:endless:1.2.3'
+}
+```
+
+Or, if you cannot use SSL, use `http://repo.commonsware.com` for the repository
+URL. This should automatically pull down the CWAC-Adapter dependency.
 
 Usage
 -----
@@ -247,22 +275,23 @@ and stack traces if you are encountering crashes.
 
 Release Notes
 -------------
-* v1.2.2: removed extraneous `Log` statement
-* v1.2.1: fix for `IllegalStateException: The content of the adapter has changed` bug
-* v1.2: made pending view disabled for list item clicks, made fewer mods in BG thread
-* v1.1: merged two pull requests, adding new constructors and `stopAppending()`
-* v1.0.0: made this the official 1.0 release
-* v0.10.0: added support for `setRunInBackground()` (patch courtesy of [brk3](https://github.com/brk3)), cleaned up demos a bit
-* v0.9.1: made `AppendTask` constructor `protected`
-* v0.9.0: added `restartAppending()` and `buildTask()`, refactored `AppendTask`, added new sample activity
-* v0.8.0: added `setSerialized()` and `isSerialized()`
-* v0.7.0: `cacheInBackground()` can now throw checked exceptions, new `getContext()` method available for subclasses
-* v0.6.1: merged bug fix from rgladwell/cwac-endless; added @Override annotations
-* v0.6.0: added pending `View` support via constructor
-* v0.5.0: added `onException()`
-* v0.4.0: eliminated need for `rebindPendingView()`, documented the no-data scenario
-* v0.3.1: fixed bug in manifest
-* v0.3.0: converted to Android library project, added call to `notifyDataSetChanged()`
+- v1.2.3: migrated to Gradle, published AAR
+- v1.2.2: removed extraneous `Log` statement
+- v1.2.1: fix for `IllegalStateException: The content of the adapter has changed` bug
+- v1.2: made pending view disabled for list item clicks, made fewer mods in BG thread
+- v1.1: merged two pull requests, adding new constructors and `stopAppending()`
+- v1.0.0: made this the official 1.0 release
+- v0.10.0: added support for `setRunInBackground()` (patch courtesy of [brk3](https://github.com/brk3)), cleaned up demos a bit
+- v0.9.1: made `AppendTask` constructor `protected`
+- v0.9.0: added `restartAppending()` and `buildTask()`, refactored `AppendTask`, added new sample activity
+- v0.8.0: added `setSerialized()` and `isSerialized()`
+- v0.7.0: `cacheInBackground()` can now throw checked exceptions, new `getContext()` method available for subclasses
+- v0.6.1: merged bug fix from rgladwell/cwac-endless; added @Override annotations
+- v0.6.0: added pending `View` support via constructor
+- v0.5.0: added `onException()`
+- v0.4.0: eliminated need for `rebindPendingView()`, documented the no-data scenario
+- v0.3.1: fixed bug in manifest
+- v0.3.0: converted to Android library project, added call to `notifyDataSetChanged()`
 
 Who Made This?
 --------------
