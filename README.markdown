@@ -1,6 +1,8 @@
 CWAC EndlessAdapter: It Just Keeps Going and Going And...
 =========================================================
 
+**WORK ON THIS PROJECT IS SUSPENDED, PENDING A REBOOT OF THE CONCEPT**
+
 AJAX Web sites have sometimes taken up the "endless page"
 model, where scrolling automatically loads in new content,
 so you never have to click a "Next" link or anything like that.
@@ -221,7 +223,7 @@ that do not work on API Level 4 and are not noted as requiring a higher version.
 
 Version
 -------
-This is version v1.2.2 of this module. It should be backwards-compatible with v1.0,
+This is version v1.2.2 of this module. It should be backwards-compatible with v1.0.0,
 with only added methods. However, there is the one behavior regression (placeholder
 row no longer clickable) as noted above.
 
