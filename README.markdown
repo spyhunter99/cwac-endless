@@ -1,7 +1,7 @@
 CWAC EndlessAdapter: It Just Keeps Going and Going And...
 =========================================================
 
-**WORK ON THIS PROJECT IS SUSPENDED, PENDING A REBOOT OF THE CONCEPT**
+**THIS PROJECT IS RETIRED**
 
 AJAX Web sites have sometimes taken up the "endless page"
 model, where scrolling automatically loads in new content,
