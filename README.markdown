@@ -37,7 +37,7 @@ possibly other one-`View`-at-a-time `AdapterView` implementations.
 Installation
 ------------
 This Android library project is 
-[available as a JAR](https://gihub.com/commonsguy/cwac-endless/releases).
+[available as a JAR](https://github.com/commonsguy/cwac-endless/releases).
 If you wish to use the JAR, you will need to also add the JAR from
 [the CWAC-Adapter project](http://github.com/commonsguy/cwac-adapter) to your
 project
