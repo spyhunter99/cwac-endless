@@ -10,7 +10,7 @@ This is a fork of the original, modifications include
 <script src="http://vjs.zencdn.net/4.0/video.js"></script>
 
 <video id="pelican-installation" class="video-js vjs-default-skin" controls
-preload="auto" width="683" height="384" poster="/static/screencasts/pelican-installation.png"
+preload="auto" width="683" height="384" 
 data-setup="{}">
 <source src="blob/master/device-2015-11-11-110313.mp4device-2015-11-11-110313.mp4" type='video/mp4'>
 </video>
