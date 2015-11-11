@@ -7,13 +7,9 @@ This is a fork of the original, modifications include
 - reduced dependencies to 0 by including the a required dependency in the library (just a single .java file)
 
 
-<script src="http://vjs.zencdn.net/4.0/video.js"></script>
 
-<video id="pelican-installation" class="video-js vjs-default-skin" controls
-preload="auto" width="683" height="384" 
-data-setup="{}">
-<source src="blob/master/device-2015-11-11-110313.mp4device-2015-11-11-110313.mp4" type='video/mp4'>
-</video>
+![alt text](blob/master/device-2015-11-11-110313.mp4device-2015-11-11-110313.gif "Example Video")
+
 
 
 
