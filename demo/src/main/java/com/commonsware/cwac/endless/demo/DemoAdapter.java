@@ -45,7 +45,7 @@ class DemoAdapter extends EndlessAdapter {
 
     @Override
     protected boolean cacheInBackground() {
-        SystemClock.sleep(10000);       // pretend to do work
+        SystemClock.sleep(5000);       // pretend to do work
 
         return (getWrappedAdapter().getCount() < 75);
     }
