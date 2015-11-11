@@ -1,24 +1,10 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
-        classpath 'com.github.dcendents:android-maven-plugin:1.0'
-    }
-}
 
-apply plugin: 'android-library'
-apply plugin: 'android-maven'
 
-version '1.2.3'
+apply plugin: 'com.android.library'
+
+
 group 'com.commonsware.cwac'
 
-repositories {
-    maven {
-        url "https://repo.commonsware.com.s3.amazonaws.com"
-    }
-}
 
 dependencies {
     compile 'com.commonsware.cwac:adapter:1.0.1'
@@ -27,33 +13,22 @@ dependencies {
 
 android {
     compileSdkVersion 17
-    buildToolsVersion "18.1.0"
+    buildToolsVersion "19.1.0"
 
-    sourceSets {
-        main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            resources.srcDirs = ['src']
-            aidl.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            res.srcDirs = ['res']
-            assets.srcDirs = ['assets']
-        }
-
-        debug.setRoot('build-types/debug')
-        release.setRoot('build-types/release')
+    defaultConfig {
+        minSdkVersion 4
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.2.3"
     }
-}
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
 
-// from http://stackoverflow.com/a/19484146/115145
-
-android.libraryVariants.all { variant ->
-  def name = variant.buildType.name
-  if (name.equals(com.android.builder.BuilderConstants.DEBUG)) {
-    return; // Skip debug builds.
-  }
-  def task = project.tasks.create "jar${name.capitalize()}", Jar
-  task.dependsOn variant.javaCompile
-  task.from variant.javaCompile.destinationDir
-  // artifacts.add('archives', task);
 }

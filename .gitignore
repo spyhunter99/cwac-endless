@@ -1,0 +1,8 @@
+/endless/build/
+/build/
+/demo/build/
+*.iml
+/.idea/
+/.gradle/
+.gradle/
+.idea/
