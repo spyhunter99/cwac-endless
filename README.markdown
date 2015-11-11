@@ -1,3 +1,13 @@
+
+This is a fork of the original, modifications include
+
+- updated build tech
+- android studio support
+- swipe down for refresh example
+- reduced dependencies to 0 by including the a required dependency in the library (just a single .java file)
+
+
+
 CWAC EndlessAdapter: It Just Keeps Going and Going And...
 =========================================================
 
