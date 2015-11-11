@@ -8,7 +8,7 @@ This is a fork of the original, modifications include
 
 
 
-![alt text](blob/master/device-2015-11-11-110313.mp4device-2015-11-11-110313.gif "Example Video")
+![alt text](blob/master/device-2015-11-11-110313.gif "Example Video")
 
 
 
